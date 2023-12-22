@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --bg: #e8e7d5;
+    --yellow: #ffd630;
+    --orange: #f5812a;
+    --red: #ee2e2b;
+    --black: #312f32;
+    --green: #1c5335;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: var(--black);
+}
+
+body {
+    background: var(--bg);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.btn::after {
+    content: "▲";
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--bg);
+    transition: margin-top 250ms;
+}
+
+.btn:hover::after {
+    margin-top: -8px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    flex-direction: row;
+    font-weight: 600;
+}
+
+.navbar ul li {
+    margin-right: 30px;
+}
+
+.navbar ul li a {
+    display: flex;
+    position: relative;
+    padding-top: 25px;
+}
+
+.navbar ul li a:hover {
+    color: var(--orange);
+}
+
+.hero-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--black);
+    background-size: cover;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+    z-index: -1; 
+}
+
+.text-overlay {
+    position: absolute;
+    left: 50px; 
+    top: 35%;
+    
+    /*transform: translateY(-50%);*/
+    
+}
+
+.text-overlay h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+    color: var(--bg);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.text-overlay p {
+    font-size: 1.5em;
+    max-width: 1100px;
+    color: var(--bg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* ALBUMS */
+
+.container-album {
+    text-align: center;
+    width: 100%;
+}
+
+.container-album h1 {
+    font-size: 46px;
+    margin-top: 400px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+
+.band-albums {
+    display: inline-block;
+    padding: 26px;
+}
+
+.band-albums h4 {
+    margin-top: 6px;
+}
+
+.band-albums img {
+    width: 250px;
+}
+
+
+/* MEMBERS */
+
+.container-band-oldmembers {
+    text-align: center;
+    width: 100%;
+}
+
+.container-band-oldmembers h1 {
+    font-size: 46px;
+    margin-top: 400px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.band-oldmembers {
+    display: inline-block;
+    padding: 26px;
+}
+
+.band-oldmembers img {
+    width: 250px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    /*-webkit-filter: grayscale(100%);*/
+
+}
+
+.band-oldmembers img:hover {
+    transform: scale(1.1);
+    transition: all 0.8 ease;
+    -webkit-filter: grayscale(0%);
+    transition: 1s;
+}
+
+
+footer {
+    background-color: var(--black);
+    height: 300px;
+    margin-top: 400px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+footer h4 {
+    color: var(--yellow);
+    font-size: 26px;
+    padding-top: 70px;
+}
+
+.socials {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.socials p {
+    margin-top: 20px;
+    color: #e8e7d5;
+}
+
+.socials p strong {
+    color: var(--yellow);
+}
+
+.socials p a {
+    color: var(--orange);
+}
+
+.socials p a:hover {
+    color: var(--bg);
+}
+
+.socials i {
+    color: #e8e7d5;
+    width: 25px;
+    margin-top: 26px;
+    margin-bottom: 12px;
+}
+
+.socials i:hover {
+    color: var(--orange);
+    transform: scale(1.5);
+    transition: all 0.8 ease;
+    transition: 0.5s;
+}
+
+.img-left img,
+.img-right img {
+    width: 250px;
+}
+
+.img-left img {
+    left: -50px;
+    transform: rotateZ(-10deg);
+    margin-top: -160px;
+    margin-left: -1490px;
+    border: 12px solid var(--red);
+}
+
+.img-right img {
+    right: -50px;
+    transform: rotateZ(10deg);
+    margin-top: -460px;
+    margin-right: -1465px;
+    border: 12px solid var(--red);
+}
